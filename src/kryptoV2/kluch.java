@@ -27,11 +27,11 @@ public class kluch {
 					kluch_int = Integer.parseInt(a);
 					if (kluch_int<=0 || kluch_int>=65)
 					{
-						JOptionPane.showMessageDialog(null, "Ключ не удволетворяет условию 0<ключ<65");
+						JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 0<пїЅпїЅпїЅпїЅ<65");
 						kluch_int=1;
 					}
 				}
-				catch(NumberFormatException nf){JOptionPane.showMessageDialog(null, "Ключ должен быть целым числом!");}
+				catch(NumberFormatException nf){JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!");}
 				
 			return kluch_int;
 				
@@ -49,7 +49,7 @@ public class kluch {
 			{
 			}
 		}
-		catch(NumberFormatException nf){JOptionPane.showMessageDialog(null, "Ключ должен состоять из букв!");}
+		catch(NumberFormatException nf){JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ!");}
 		
 		
 		return kluch_str;

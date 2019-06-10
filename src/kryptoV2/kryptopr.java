@@ -21,28 +21,28 @@ public class kryptopr extends JFrame
 	
 
 	
-		//Текст пользователя
+		//пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		static String textpolz="";
 
 		
 		
 		
-		//Конечный текст
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 		static String textkn="";
 		
 		
 		
-		//Изображения
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		static Image helpimg1, helpimg2, helpimg3, helpimg4, kssImg, background;
 		
 		
 		
-		//Номера букв
+		//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 		static int nombukvi;
 		
 		
 		
-		//Выбранная позиция списка
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 		static int numbersel=-1;
 		
 		
@@ -55,17 +55,17 @@ public class kryptopr extends JFrame
 
 		static String end_text;
 
-		// Т е к с т о в ы е _ п о л я
+		// пїЅ пїЅ пїЅ пїЅ пїЅ пїЅ пїЅ пїЅ пїЅ _ пїЅ пїЅ пїЅ пїЅ
 		JTextArea text,text_shifr;
 		
 		
 		
-		// П о л е _ д л я _ к л ю ч а
+		// пїЅ пїЅ пїЅ пїЅ _ пїЅ пїЅ пїЅ _ пїЅ пїЅ пїЅ пїЅ пїЅ
 		JTextField vvk;
 		
 		
 		
-		//ЧекБоксы
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		JCheckBox shifr_or_deshifr;
 		
 		
@@ -73,38 +73,38 @@ public class kryptopr extends JFrame
 		JButton btn_text_from_file,btn_text_to_file;
 		
 		
-		//Кнопка_сохранения_параметров
+		//пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		JButton save_settings;
 		
 		
-		//_кнопки_
+		//_пїЅпїЅпїЅпїЅпїЅпїЅ_
 		JButton exit;
 		
-		//Скроллы_для_текстовых_полей
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅ
 		JScrollPane scroll, scroll2,scroll3;
 		
 		
 		
-		// С п и с о к _ с _ ш и ф р а м и
+		// пїЅ пїЅ пїЅ пїЅ пїЅ пїЅ _ пїЅ _ пїЅ пїЅ пїЅ пїЅ пїЅ пїЅ пїЅ
 		JList list;
 		
-		//URL_для_файлов_htm
+		//URL_пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ_htm
 		URL URL_WITH_TEXT;
 		
 		
-		//стринговая_переменная_для_ключа
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅ
 		String kluchstr;
 		int kluchint;
 		
-		//Язык_0_-_русский_,_1_-_английский
+		//пїЅпїЅпїЅпїЅ_0_-_пїЅпїЅпїЅпїЅпїЅпїЅпїЅ_,_1_-_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		int lang=0;
 		
-		//стринговые_переменные_для_текстов_стандартных_и_зашифрованных_соответственно
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		static String standart_text,krypto_text;
 		
 		JLabel[] label = new JLabel[10];
 		
-		//стиль_для_текста
+		//пїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ
 		static Font textFont = new Font("arial",3,20);
 		
 		
@@ -133,22 +133,22 @@ public class kryptopr extends JFrame
 		
 		 
 
-	//Ширина_экрана
+	//пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ
 	int screenWidth;
 	
-	//один_процент_от_ширины_панели
+	//пїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ
 	int one_percentage_of_the_width;
 
 	
-	//высота_экрана 
+	//пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ 
     int screenHeight;
     
-    //Один_процент_от_высоты_панели
+    //пїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ
     int one_percentage_of_the_height;
 	
 	public kryptopr()
 	{		
-		setTitle("Крипто");
+		setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
 		//super(new JFrame(){@Override public boolean isShowing(){return true;}});
@@ -207,10 +207,10 @@ public class kryptopr extends JFrame
 			
 			con.add(leftpanes);
 			
-			leftpanes.addTab("                     Выбор шифра                       ", shifr_select_pane);
-			leftpanes.addTab("Параметры шифрования/дешифрования", shifr_settings_pane);
-			leftpanes.addTab("Ввод текста", text_enter_pane);
-			leftpanes.addTab("Тесты", tests);
+			leftpanes.addTab("                     пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ                       ", shifr_select_pane);
+			leftpanes.addTab("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", shifr_settings_pane);
+			leftpanes.addTab("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ", text_enter_pane);
+			leftpanes.addTab("пїЅпїЅпїЅпїЅпїЅ", tests);
 			
 			
 			
@@ -238,7 +238,7 @@ public class kryptopr extends JFrame
 			
 			
 			
-			String[] spisok = { "Информация","Атбаш", "Шифр Цезаря", "Шифр Виженера","MD2", "MD5","SHA-1","SHA-256","SHA-384","SHA-512"};	
+			String[] spisok = { "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ","пїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ","MD2", "MD5","SHA-1","SHA-256","SHA-384","SHA-512"};	
 			list = new JList(spisok);
 			list.setLayoutOrientation(JList.VERTICAL);		
 			list.setFont(textFont);
@@ -388,7 +388,7 @@ public class kryptopr extends JFrame
 			
 			
 			
-///////////////////////////Элементы_панели_с_выбором_шифра////////////////////////////////////////////			
+///////////////////////////пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅ////////////////////////////////////////////			
 			about = new JEditorPane();
 			about.setVisible(true);
 			about.setEditable(false);
@@ -427,7 +427,7 @@ public class kryptopr extends JFrame
 			
 			
 
-///////////////////////////Элементы_панели_с_вводом_текста////////////////////////////////////////////	
+///////////////////////////пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ////////////////////////////////////////////	
 	
 			  
 	    
@@ -435,7 +435,7 @@ public class kryptopr extends JFrame
 			
          	
 		    
-   btn_text_from_file = new JButton("Открыть файл");
+   btn_text_from_file = new JButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ");
    btn_text_from_file.setBorder(BorderFactory.createLineBorder(new Color(93,0,255)));
    btn_text_from_file.setBackground(new Color(222, 214, 255));
    btn_text_from_file.setVisible(true); 
@@ -445,7 +445,7 @@ public class kryptopr extends JFrame
 		
 			JFileChooser fileopen = new JFileChooser();
 
-			int d = fileopen.showDialog(null,"Открыть файл");
+			int d = fileopen.showDialog(null,"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ");
 			if (d == JFileChooser.APPROVE_OPTION)
 			{
 				File file = fileopen.getSelectedFile();
@@ -459,21 +459,21 @@ public class kryptopr extends JFrame
 		            }
 		            in.close();
 		        } catch (FileNotFoundException ex) {
-		            JOptionPane.showMessageDialog(null, "Файл не найден, или доступ к нему закрыт");
+		            JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 		        }
 				text.setText(txt_file);
 			}
 		}
 		
 	});
-   btn_text_to_file = new JButton("Сохранить результат");
+   btn_text_to_file = new JButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
    btn_text_to_file.setBorder(BorderFactory.createLineBorder(new Color(93,0,255)));
    btn_text_to_file.setBackground(new Color(222, 214, 255));
    btn_text_to_file.setVisible(true); 
    text_enter_pane.add(btn_text_to_file);
    btn_text_to_file.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
-			JOptionPane.showMessageDialog(null, "Укажите в названии файла расширение .txt, в противном случае вы не сможете его использовать в данной программе");
+			JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ .txt, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 			FileNameExtensionFilter filter = new FileNameExtensionFilter("*.TXT","*.*");
 	        JFileChooser file_saver = new JFileChooser();
 	        file_saver.setFileFilter(filter);
@@ -482,7 +482,7 @@ public class kryptopr extends JFrame
 	                fw.write(text_shifr.getText());
 	            }
 	            catch ( IOException e ) {
-	            	JOptionPane.showMessageDialog(null, "Возможно, доступ для сохранения закрыт");
+	            	JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 	            }
 	        }
 		}
@@ -517,17 +517,17 @@ public class kryptopr extends JFrame
 		        	 else if (numbersel ==  3 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(vijener.shifr(text.getText(),kluchstr,lang));}
 		        	 else if (numbersel ==  3 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {text_shifr.setText(vijener.deshifr(text.getText(),kluchstr,lang));}
 		        	 else if (numbersel ==  4 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(MD5.md2hex_create(text.getText()));}
-		        	 else if (numbersel ==  4 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "MD2 расшифровке не подлежит!");}
+		        	 else if (numbersel ==  4 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "MD2 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");}
 		        	 else if (numbersel ==  5 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(MD5.md5hex_create(text.getText()));}
-		        	 else if (numbersel ==  5 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "MD5 расшифровке не подлежит!");}
+		        	 else if (numbersel ==  5 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "MD5 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");}
 		        	 else if (numbersel ==  6 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(SHA.SHA1hex_create(text.getText()));}
-		        	 else if (numbersel ==  6 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-1 расшифровке не подлежит!");}
+		        	 else if (numbersel ==  6 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-1 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");}
 		        	 else if (numbersel ==  7 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(SHA.SHA256hex_create(text.getText()));}
-		        	 else if (numbersel ==  7 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-256 расшифровке не подлежит!");}
+		        	 else if (numbersel ==  7 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-256 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");}
 		        	 else if (numbersel ==  8 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(SHA.SHA384hex_create(text.getText()));}
-		        	 else if (numbersel ==  8 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-384 расшифровке не подлежит!");}
+		        	 else if (numbersel ==  8 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-384 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");}
 		        	 else if (numbersel ==  9 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(SHA.SHA512hex_create(text.getText()));}
-		        	 else if (numbersel ==  9 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-512 расшифровке не подлежит!");}
+		        	 else if (numbersel ==  9 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-512 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");}
 		        
 		        }
 		        @Override
@@ -586,7 +586,7 @@ public class kryptopr extends JFrame
 		
 		
 		
-///////////////////////////Элементы_панели_с_вводом_параметров////////////////////////////////////////////
+///////////////////////////пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅ_пїЅпїЅпїЅпїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ////////////////////////////////////////////
 			
 			
 			
@@ -597,8 +597,8 @@ public class kryptopr extends JFrame
 			}
 			
 			
-			label[0].setText("Ключ");
-			label[1].setText("Язык : Русский");
+			label[0].setText("пїЅпїЅпїЅпїЅ");
+			label[1].setText("пїЅпїЅпїЅпїЅ : пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 			
 			
 			vvk = new JTextField();
@@ -612,7 +612,7 @@ public class kryptopr extends JFrame
 			
 			
 			
-			save_settings = new JButton("Сохранить параметры");
+			save_settings = new JButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 			save_settings.setBorder(BorderFactory.createLineBorder(new Color(93,0,255)));
 			save_settings.setBackground(new Color(222, 214, 255));
 			shifr_settings_pane.add(save_settings);
@@ -631,15 +631,15 @@ public class kryptopr extends JFrame
 		
 		
 			JComboBox<String> language = new JComboBox<String>();
-			language.addItem("Русский");
-			language.addItem("Английский");
+			language.addItem("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+			language.addItem("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 			language.setBorder(BorderFactory.createLineBorder(new Color(93,0,255)));
 			language.setBackground(new Color(222, 214, 255));
 			language.addItemListener(new ItemListener() {
 				public void itemStateChanged(ItemEvent arg0) {
 					lang =  language.getSelectedIndex();
-					if (lang==0) label[1].setText("Язык : Русский");
-					else if (lang == 1) label[1].setText("Язык : Английский");
+					if (lang==0) label[1].setText("пїЅпїЅпїЅпїЅ : пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+					else if (lang == 1) label[1].setText("пїЅпїЅпїЅпїЅ : пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 				}
 				
 					
