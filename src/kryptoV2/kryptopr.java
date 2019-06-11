@@ -21,28 +21,28 @@ public class kryptopr extends JFrame
 	
 
 	
-		//����� ������������
+		//Текст пользователя
 		static String textpolz="";
 
 		
 		
 		
-		//�������� �����
+		//Конечеый текст
 		static String textkn="";
 		
 		
 		
-		//�����������
+		//Изображения
 		static Image helpimg1, helpimg2, helpimg3, helpimg4, kssImg, background;
 		
 		
 		
-		//������ ����
+		//Номер текущей буквы
 		static int nombukvi;
 		
 		
 		
-		//��������� ������� ������
+		//Выбранная позиция списка
 		static int numbersel=-1;
 		
 		
@@ -55,17 +55,17 @@ public class kryptopr extends JFrame
 
 		static String end_text;
 
-		// � � � � � � � � � _ � � � �
+		//Текстовые поля
 		JTextArea text,text_shifr;
 		
 		
 		
-		// � � � � _ � � � _ � � � � �
+		//Поле для ключа
 		JTextField vvk;
 		
 		
 		
-		//��������
+		//Чек бокс
 		JCheckBox shifr_or_deshifr;
 		
 		
@@ -73,38 +73,38 @@ public class kryptopr extends JFrame
 		JButton btn_text_from_file,btn_text_to_file;
 		
 		
-		//������_����������_����������
+		//Кнопка сохранения параметров
 		JButton save_settings;
 		
 		
-		//_������_
+		//Кнопки
 		JButton exit;
 		
-		//�������_���_���������_�����
+		//Скроллы для текстовых полей
 		JScrollPane scroll, scroll2,scroll3;
 		
 		
 		
-		// � � � � � � _ � _ � � � � � � �
+		//Список (меню) с шифрами
 		JList list;
 		
-		//URL_���_������_htm
+		//URL для html шифров
 		URL URL_WITH_TEXT;
 		
 		
-		//����������_����������_���_�����
+		//Переменные для ключа
 		String kluchstr;
 		int kluchint;
 		
-		//����_0_-_�������_,_1_-_����������
+		//Язык. 0 - русский, 1 - английский
 		int lang=0;
 		
-		//����������_����������_���_�������_�����������_�_�������������_��������������
+		//Стандартный и зашифрованный тексты
 		static String standart_text,krypto_text;
 		
 		JLabel[] label = new JLabel[10];
 		
-		//�����_���_������
+		//Стиль для текста
 		static Font textFont = new Font("arial",3,20);
 		
 		
@@ -133,22 +133,22 @@ public class kryptopr extends JFrame
 		
 		 
 
-	//������_������
+	//Ширина экрана
 	int screenWidth;
 	
-	//����_�������_��_������_������
+	//Один процент от ширины
 	int one_percentage_of_the_width;
 
 	
-	//������_������ 
+	//Высота экрана
     int screenHeight;
     
-    //����_�������_��_������_������
+    //Один процент от высоты
     int one_percentage_of_the_height;
 	
 	public kryptopr()
 	{		
-		setTitle("������");
+		setTitle("Крипто");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
 		//super(new JFrame(){@Override public boolean isShowing(){return true;}});
@@ -207,10 +207,10 @@ public class kryptopr extends JFrame
 			
 			con.add(leftpanes);
 			
-			leftpanes.addTab("                     ����� �����                       ", shifr_select_pane);
-			leftpanes.addTab("��������� ����������/������������", shifr_settings_pane);
-			leftpanes.addTab("���� ������", text_enter_pane);
-			leftpanes.addTab("�����", tests);
+			leftpanes.addTab("                     Выбор шифра                       ", shifr_select_pane);
+			leftpanes.addTab("Параметры шифрования/дешифрования", shifr_settings_pane);
+			leftpanes.addTab("Ввод текста", text_enter_pane);
+			leftpanes.addTab("Тесты", tests);
 			
 			
 			
@@ -236,9 +236,14 @@ public class kryptopr extends JFrame
 			
 			
 			
-			
-			
-			String[] spisok = { "����������","�����", "���� ������", "���� ��������","MD2", "MD5","SHA-1","SHA-256","SHA-384","SHA-512"};	
+			String[] spisok = { "Информация",
+					"Атбаш",
+					"Шифр Цезаря",
+					"Шифр Виженера",
+					"MD2","MD5",
+					"SHA-1","SHA-256",
+					"SHA-384","SHA-512"};
+
 			list = new JList(spisok);
 			list.setLayoutOrientation(JList.VERTICAL);		
 			list.setFont(textFont);
@@ -388,7 +393,7 @@ public class kryptopr extends JFrame
 			
 			
 			
-///////////////////////////��������_������_�_�������_�����////////////////////////////////////////////			
+///////////////////////////Элементы панели с выбором шифра////////////////////////////////////////////
 			about = new JEditorPane();
 			about.setVisible(true);
 			about.setEditable(false);
@@ -427,7 +432,7 @@ public class kryptopr extends JFrame
 			
 			
 
-///////////////////////////��������_������_�_������_������////////////////////////////////////////////	
+///////////////////////////Элементы панели с вводом текста////////////////////////////////////////////
 	
 			  
 	    
@@ -435,7 +440,7 @@ public class kryptopr extends JFrame
 			
          	
 		    
-   btn_text_from_file = new JButton("������� ����");
+   btn_text_from_file = new JButton("Открыть файл");
    btn_text_from_file.setBorder(BorderFactory.createLineBorder(new Color(93,0,255)));
    btn_text_from_file.setBackground(new Color(222, 214, 255));
    btn_text_from_file.setVisible(true); 
@@ -445,7 +450,7 @@ public class kryptopr extends JFrame
 		
 			JFileChooser fileopen = new JFileChooser();
 
-			int d = fileopen.showDialog(null,"������� ����");
+			int d = fileopen.showDialog(null,"Открыть текст");
 			if (d == JFileChooser.APPROVE_OPTION)
 			{
 				File file = fileopen.getSelectedFile();
@@ -459,21 +464,21 @@ public class kryptopr extends JFrame
 		            }
 		            in.close();
 		        } catch (FileNotFoundException ex) {
-		            JOptionPane.showMessageDialog(null, "���� �� ������, ��� ������ � ���� ������");
+		            JOptionPane.showMessageDialog(null, "Файл не найден или доступ закрыт");
 		        }
 				text.setText(txt_file);
 			}
 		}
 		
 	});
-   btn_text_to_file = new JButton("��������� ���������");
+   btn_text_to_file = new JButton("Сохранить результат");
    btn_text_to_file.setBorder(BorderFactory.createLineBorder(new Color(93,0,255)));
    btn_text_to_file.setBackground(new Color(222, 214, 255));
    btn_text_to_file.setVisible(true); 
    text_enter_pane.add(btn_text_to_file);
    btn_text_to_file.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
-			JOptionPane.showMessageDialog(null, "������� � �������� ����� ���������� .txt, � ��������� ������ �� �� ������� ��� ������������ � ������ ���������");
+			JOptionPane.showMessageDialog(null, "Удостоверьтесь, что расширение файла txt");
 			FileNameExtensionFilter filter = new FileNameExtensionFilter("*.TXT","*.*");
 	        JFileChooser file_saver = new JFileChooser();
 	        file_saver.setFileFilter(filter);
@@ -482,7 +487,7 @@ public class kryptopr extends JFrame
 	                fw.write(text_shifr.getText());
 	            }
 	            catch ( IOException e ) {
-	            	JOptionPane.showMessageDialog(null, "��������, ������ ��� ���������� ������");
+	            	JOptionPane.showMessageDialog(null, "Возможно, отказано в доступе =(");
 	            }
 	        }
 		}
@@ -517,17 +522,17 @@ public class kryptopr extends JFrame
 		        	 else if (numbersel ==  3 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(vijener.shifr(text.getText(),kluchstr,lang));}
 		        	 else if (numbersel ==  3 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {text_shifr.setText(vijener.deshifr(text.getText(),kluchstr,lang));}
 		        	 else if (numbersel ==  4 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(MD5.md2hex_create(text.getText()));}
-		        	 else if (numbersel ==  4 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "MD2 ����������� �� ��������!");}
+		        	 else if (numbersel ==  4 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "MD2 не подлежит расшифровке!");}
 		        	 else if (numbersel ==  5 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(MD5.md5hex_create(text.getText()));}
-		        	 else if (numbersel ==  5 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "MD5 ����������� �� ��������!");}
+		        	 else if (numbersel ==  5 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "MD5 не подлежит расшифровке!");}
 		        	 else if (numbersel ==  6 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(SHA.SHA1hex_create(text.getText()));}
-		        	 else if (numbersel ==  6 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-1 ����������� �� ��������!");}
+		        	 else if (numbersel ==  6 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-1 не подлежит расшифровке!");}
 		        	 else if (numbersel ==  7 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(SHA.SHA256hex_create(text.getText()));}
-		        	 else if (numbersel ==  7 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-256 ����������� �� ��������!");}
+		        	 else if (numbersel ==  7 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-256 не подлежит расшифровке!");}
 		        	 else if (numbersel ==  8 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(SHA.SHA384hex_create(text.getText()));}
-		        	 else if (numbersel ==  8 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-384 ����������� �� ��������!");}
+		        	 else if (numbersel ==  8 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-384 не подлежит расшифровке!");}
 		        	 else if (numbersel ==  9 && ((key == KeyEvent.VK_B && ev.isControlDown()) || key == KeyEvent.VK_F7) )   {text_shifr.setText(SHA.SHA512hex_create(text.getText()));}
-		        	 else if (numbersel ==  9 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-512 ����������� �� ��������!");}
+		        	 else if (numbersel ==  9 && ((key == KeyEvent.VK_N && ev.isControlDown()) || key == KeyEvent.VK_F8) )   {JOptionPane.showMessageDialog(null, "SHA-512 не подлежит расшифровке!");}
 		        
 		        }
 		        @Override
@@ -586,7 +591,7 @@ public class kryptopr extends JFrame
 		
 		
 		
-///////////////////////////��������_������_�_������_����������////////////////////////////////////////////
+///////////////////////////Элементы панели с вводом параметров////////////////////////////////////////////
 			
 			
 			
@@ -597,8 +602,8 @@ public class kryptopr extends JFrame
 			}
 			
 			
-			label[0].setText("����");
-			label[1].setText("���� : �������");
+			label[0].setText("Ключ");
+			label[1].setText("Язык : Русский");
 			
 			
 			vvk = new JTextField();
@@ -612,7 +617,7 @@ public class kryptopr extends JFrame
 			
 			
 			
-			save_settings = new JButton("��������� ���������");
+			save_settings = new JButton("Сохранить параметры");
 			save_settings.setBorder(BorderFactory.createLineBorder(new Color(93,0,255)));
 			save_settings.setBackground(new Color(222, 214, 255));
 			shifr_settings_pane.add(save_settings);
@@ -631,15 +636,15 @@ public class kryptopr extends JFrame
 		
 		
 			JComboBox<String> language = new JComboBox<String>();
-			language.addItem("�������");
-			language.addItem("����������");
+			language.addItem("Русский");
+			language.addItem("Английский");
 			language.setBorder(BorderFactory.createLineBorder(new Color(93,0,255)));
 			language.setBackground(new Color(222, 214, 255));
 			language.addItemListener(new ItemListener() {
 				public void itemStateChanged(ItemEvent arg0) {
 					lang =  language.getSelectedIndex();
-					if (lang==0) label[1].setText("���� : �������");
-					else if (lang == 1) label[1].setText("���� : ����������");
+					if (lang==0) label[1].setText("Язык : Русский");
+					else if (lang == 1) label[1].setText("Язык : Английский");
 				}
 				
 					
