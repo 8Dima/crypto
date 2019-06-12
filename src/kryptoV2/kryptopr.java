@@ -43,25 +43,25 @@ public class kryptopr extends JFrame
 		
 		
 		//Выбранная позиция списка
-		static int numbersel=-1;
+		private static int numbersel=-1;
 		
 		
 		
 		static int chr;
 		
 		
-		JEditorPane about;
+		private JEditorPane about;
 
 
 		static String end_text;
 
 		//Текстовые поля
-		JTextArea text,text_shifr;
+		private JTextArea text,text_shifr;
 		
 		
 		
 		//Поле для ключа
-		JTextField vvk;
+		private JTextField vvk;
 		
 		
 		
@@ -70,42 +70,42 @@ public class kryptopr extends JFrame
 		
 		
 		
-		JButton btn_text_from_file,btn_text_to_file;
+		private JButton btn_text_from_file,btn_text_to_file;
 		
 		
 		//Кнопка сохранения параметров
-		JButton save_settings;
+		private JButton save_settings;
 		
 		
 		//Кнопки
 		JButton exit;
 		
 		//Скроллы для текстовых полей
-		JScrollPane scroll, scroll2,scroll3;
+		private JScrollPane scroll, scroll2,scroll3;
 		
 		
 		
 		//Список (меню) с шифрами
-		JList list;
+		private JList list;
 		
 		//URL для html шифров
 		URL URL_WITH_TEXT;
 		
 		
 		//Переменные для ключа
-		String kluchstr;
-		int kluchint;
+		private String kluchstr;
+		private int kluchint;
 		
 		//Язык. 0 - русский, 1 - английский
-		int lang=0;
+		private int lang=0;
 		
 		//Стандартный и зашифрованный тексты
 		static String standart_text,krypto_text;
 		
-		JLabel[] label = new JLabel[10];
+		private JLabel[] label = new JLabel[10];
 		
 		//Стиль для текста
-		static Font textFont = new Font("arial",3,20);
+		private static Font textFont = new Font("arial",3,20);
 		
 		
 		
@@ -122,34 +122,34 @@ public class kryptopr extends JFrame
 				1069, 1101, 1070, 1102, 1071, 1103};
 		
 		
-		atbash atbash = new atbash();	
-		cesar cesar = new cesar();
-		kluch kluch = new kluch();
-		MD5 MD5 = new MD5();
-		SHA SHA = new SHA();
-		vijener vijener = new vijener();
+		private atbash atbash = new atbash();
+		private cesar cesar = new cesar();
+		private kluch kluch = new kluch();
+		private MD5 MD5 = new MD5();
+		private SHA SHA = new SHA();
+		private vijener vijener = new vijener();
 		
 		
 		
 		 
 
 	//Ширина экрана
-	int screenWidth;
+	private int screenWidth;
 	
 	//Один процент от ширины
-	int one_percentage_of_the_width;
+	private int one_percentage_of_the_width;
 
 	
 	//Высота экрана
-    int screenHeight;
+    private int screenHeight;
     
     //Один процент от высоты
-    int one_percentage_of_the_height;
+    private int one_percentage_of_the_height;
 	
-	public kryptopr()
+	private kryptopr()
 	{		
 		setTitle("Крипто");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setResizable(false);
 		//super(new JFrame(){@Override public boolean isShowing(){return true;}});
 		
