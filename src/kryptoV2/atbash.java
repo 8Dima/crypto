@@ -17,7 +17,7 @@ class atbash {
 			84, 116, 85, 117, 86, 118, 87, 119, 88, 120, 89, 121, 90, 122};
 	
 	
-	private int int_simv,nomer_bukvi,f=0;
+	private int nomer_bukvi, f=0;
 	private String end_text;
 	String shifr(String s, int lang)
 	{
@@ -38,7 +38,7 @@ class atbash {
 		if ((int)simv[f]==rusalph[i]) 
   		 {
   			nomer_bukvi=64 - i + 1;
-  			end_text=end_text+(char)rusalph[nomer_bukvi];
+  			end_text=end_text+rusalph[nomer_bukvi];
   		 }
 		}
 	}
@@ -49,13 +49,13 @@ class atbash {
    		 {
    			
    			nomer_bukvi=50 - i + 1;
-  			end_text=end_text+(char)anglalph[nomer_bukvi]; 
+  			end_text=end_text+anglalph[nomer_bukvi];
    		 }				        		 
    	 }
 	}
    	 if (nomer_bukvi==-1)
    	 {
-   		 end_text=end_text+(char)simv[f];
+   		 end_text=end_text+simv[f];
    	 }
    	 
    	 f++;
@@ -84,7 +84,7 @@ class atbash {
 				if ((int)simv[f]==rusalph[i]) 
 		  		 {
 		  			nomer_bukvi=64 - i + 1;
-		  			end_text=end_text+(char)rusalph[nomer_bukvi];
+		  			end_text=end_text+rusalph[nomer_bukvi];
 		  		 }
 				}
 				 
@@ -95,13 +95,13 @@ class atbash {
 		   		 {
 		   			
 		   			nomer_bukvi=50 - i + 1;
-		  			end_text=end_text+(char)anglalph[nomer_bukvi]; 
+		  			end_text=end_text+anglalph[nomer_bukvi];
 		   		 }				        		 
 		   	 }
 		   	 
 		   	 if (nomer_bukvi==-1)
 		   	 {
-		   		 end_text=end_text+(char)simv[f];
+		   		 end_text=end_text+simv[f];
 		   	 }
 		   	 
 		   	 f++;

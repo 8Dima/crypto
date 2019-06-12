@@ -34,7 +34,7 @@ class cesar {
        			 
        			nomer_bukvi=i;
        			nomer_bukvi=(nomer_bukvi+kluch) % 66;
-       			end_text=end_text+(char)rusalph[nomer_bukvi];
+       			end_text=end_text+rusalph[nomer_bukvi];
        			
        		 }				        		 
        	 }
@@ -49,12 +49,12 @@ class cesar {
        			 
        			nomer_bukvi=i;
        			nomer_bukvi=(nomer_bukvi+kluch) % 52;
-       			 end_text= end_text + (char)anglalph[nomer_bukvi];
+       			 end_text= end_text +anglalph[nomer_bukvi];
        		 }				        		 
        	 }
 			}
        	 if (nomer_bukvi==-1) {
-       		 end_text=end_text+(char)simv[f];
+       		 end_text=end_text+simv[f];
        	 }
 	
 			f++;
@@ -82,7 +82,7 @@ class cesar {
        			 
        			nomer_bukvi=i;
        			nomer_bukvi=(nomer_bukvi-kluch+66) % 66;
-       			end_text=end_text+(char)rusalph[nomer_bukvi];
+       			end_text=end_text+rusalph[nomer_bukvi];
        			
        		 }				        		 
        	 }
@@ -98,13 +98,13 @@ class cesar {
        			 
        			nomer_bukvi=i;
        			nomer_bukvi=(nomer_bukvi-kluch+52) % 52;
-       			 end_text= end_text + (char)anglalph[nomer_bukvi];
+       			 end_text= end_text +anglalph[nomer_bukvi];
        		 }				        		 
        	 }
 		}
 			
        	 if (nomer_bukvi==-1) {
-       		 end_text=end_text+(char)simv[f];
+       		 end_text=end_text+simv[f];
        	 }
 	
 			f++;

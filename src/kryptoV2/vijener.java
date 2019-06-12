@@ -12,7 +12,7 @@ class vijener {
 			74, 106, 75, 107, 76, 108, 77, 109, 78, 110, 79, 111, 80, 112, 81, 113, 82, 114, 83, 115,
 			84, 116, 85, 117, 86, 118, 87, 119, 88, 120, 89, 121, 90, 122};
 	
-	private int f=0,kluch_nom=0,kluch_index,nom_bukvi;
+	private int f=0, kluch_nom=0, kluch_index, nom_bukvi;
 	private String end_text;
 	
 	String shifr(String a, String kluch, int lang)
@@ -40,7 +40,7 @@ class vijener {
 				if ((int)simv[f]==rusalph[i]) 
 		  		 {
 					nom_bukvi=(i+kluch_index) % 65;
-		  			end_text=end_text+(char)(rusalph[nom_bukvi]);
+		  			end_text=end_text+rusalph[nom_bukvi];
 		  			
 		  			if (kluch_nom<klch.length-1){kluch_nom++;}else kluch_nom=0;
 		  			
@@ -61,7 +61,7 @@ class vijener {
 				if ((int)simv[f]==anglalph[i]) 
 		  		 {
 					nom_bukvi=(i+kluch_index) % 51;
-		  			end_text=end_text+(char)(anglalph[nom_bukvi]);
+		  			end_text=end_text+anglalph[nom_bukvi];
 		  			
 		  			if (kluch_nom<klch.length-1){kluch_nom++;}else kluch_nom=0;
 		  			
@@ -72,7 +72,7 @@ class vijener {
 			
 			if (nom_bukvi==-1)
 		   	 {
-		   		 end_text=end_text+(char)simv[f];
+		   		 end_text=end_text+simv[f];
 		   	 }
 			
 			f++;
@@ -111,7 +111,7 @@ class vijener {
 					if (nom_bukvi<0)nom_bukvi*=-1;
 					
 					
-		  			end_text=end_text+(char)(rusalph[nom_bukvi]);
+		  			end_text=end_text+rusalph[nom_bukvi];
 		  			
 		  			if (kluch_nom<klch.length-1){kluch_nom++;}else kluch_nom=0;
 		  			
@@ -132,7 +132,7 @@ class vijener {
 				if ((int)simv[f]==anglalph[i]) 
 		  		 {
 					nom_bukvi=(i-kluch_index) % 52;
-		  			end_text=end_text+(char)(anglalph[nom_bukvi]);
+		  			end_text=end_text+anglalph[nom_bukvi];
 		  			
 		  			if (kluch_nom<klch.length-1){kluch_nom++;}else kluch_nom=0;
 		  			
@@ -143,7 +143,7 @@ class vijener {
 			
 			if (nom_bukvi==-1)
 		   	 {
-		   		 end_text=end_text+(char)simv[f];
+		   		 end_text=end_text+simv[f];
 		   	 }
 			
 			f++;
