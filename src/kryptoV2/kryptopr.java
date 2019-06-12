@@ -18,42 +18,14 @@ import java.util.Scanner;
 public class kryptopr extends JFrame
 {
 
-	
-
-	
-		//Текст пользователя
-		static String textpolz="";
-
-		
-		
-		
-		//Конечеый текст
-		static String textkn="";
-		
-		
-		
-		//Изображения
-		static Image helpimg1, helpimg2, helpimg3, helpimg4, kssImg, background;
-		
-		
-		
-		//Номер текущей буквы
-		static int nombukvi;
-		
-		
 		
 		//Выбранная позиция списка
 		private static int numbersel=-1;
 		
-		
-		
-		static int chr;
-		
+
 		
 		private JEditorPane about;
 
-
-		static String end_text;
 
 		//Текстовые поля
 		private JTextArea text,text_shifr;
@@ -65,20 +37,13 @@ public class kryptopr extends JFrame
 		
 		
 		
-		//Чек бокс
-		JCheckBox shifr_or_deshifr;
-		
-		
-		
 		private JButton btn_text_from_file,btn_text_to_file;
 		
 		
 		//Кнопка сохранения параметров
 		private JButton save_settings;
 		
-		
-		//Кнопки
-		JButton exit;
+
 		
 		//Скроллы для текстовых полей
 		private JScrollPane scroll, scroll2,scroll3;
@@ -87,9 +52,7 @@ public class kryptopr extends JFrame
 		
 		//Список (меню) с шифрами
 		private JList list;
-		
-		//URL для html шифров
-		URL URL_WITH_TEXT;
+
 		
 		
 		//Переменные для ключа
@@ -98,28 +61,14 @@ public class kryptopr extends JFrame
 		
 		//Язык. 0 - русский, 1 - английский
 		private int lang=0;
-		
-		//Стандартный и зашифрованный тексты
-		static String standart_text,krypto_text;
+
 		
 		private JLabel[] label = new JLabel[10];
 		
 		//Стиль для текста
 		private static Font textFont = new Font("arial",3,20);
 		
-		
-		
-		static int[] kluch2 = new int[1000000];
-		
-		
-		static int nombukvi2;
-		
-		char[] rusalph = { 1040, 1072, 1041, 1073, 1042, 1074, 1043, 1075, 1044, 1076,
-				1045, 1077, 1025, 1105, 1046, 1078, 1047, 1079, 1048, 1080, 1049, 1081, 1050, 1082,
-				1051, 1083, 1052, 1084, 1053, 1085, 1054, 1086, 1055, 1087, 1056, 1088,
-				1057, 1089, 1058, 1090, 1059, 1091, 1060, 1092, 1061, 1093, 1062, 1094,
-				1063, 1095, 1064, 1096, 1065, 1097, 1066, 1098, 1067, 1099, 1068, 1100, 
-				1069, 1101, 1070, 1102, 1071, 1103};
+
 		
 		
 		private atbash atbash = new atbash();
@@ -135,26 +84,19 @@ public class kryptopr extends JFrame
 
 	//Ширина экрана
 	private int screenWidth;
-	
-	//Один процент от ширины
-	private int one_percentage_of_the_width;
+
 
 	
 	//Высота экрана
     private int screenHeight;
-    
-    //Один процент от высоты
-    private int one_percentage_of_the_height;
-	
+
 	private kryptopr()
 	{		
 		setTitle("Крипто");
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setResizable(false);
 		//super(new JFrame(){@Override public boolean isShowing(){return true;}});
-		
 
-		 Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		 
 		 
 		 GraphicsEnvironment environment = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -223,15 +165,8 @@ public class kryptopr extends JFrame
 		                	
 		                
 		                }
-		                //System.out.println(idx);
 		            }
 		        });
-			
-			
-			
-			one_percentage_of_the_height=shifr_select_pane.getHeight()/100;
-			one_percentage_of_the_width=shifr_select_pane.getWidth()/100;
-			
 			
 			
 			
@@ -701,9 +636,6 @@ public class kryptopr extends JFrame
     
 	public static void main(String[] args) 
 	{
-		kryptopr kryptopr = new kryptopr();
+		new kryptopr();
 	}
 }
-
-
-	
